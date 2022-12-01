@@ -9,7 +9,9 @@ def index(request):
         'age':23,
         'nationality':'British'
     }
-    return render(request, 'index.html',context) 
+    # return render(request, 'index.html',context) 
+    return render(request, 'staticcss.html',context) 
+    
 
 def counter(request):
     words = request.POST['words']
