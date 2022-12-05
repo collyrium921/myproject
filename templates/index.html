@@ -98,12 +98,13 @@
           <div class="icon-box">
             <div class="icon"><i class="ri-stack-line"></i></div>
             <h4 class="title"><a href="">{{feature.name}}</a></h4>
-            <p class="description">{{feature.details}}</p>
+            <p class="description">{{feature.details}}</p> 
+             {% comment %} 
             {% if feature.is_true %}
             <p>This feature is True</p>
             {% else %}
             <p>This feature is False</p>
-            {% endif %}
+            {% endif %} {% endcomment %}
           </div>
         </div>
         {% endfor %}
