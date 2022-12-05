@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 # Create your views here.
-def index(request):
+def index1(request):
     # return HttpResponse('<h1>Hey, Welcome</h1>')
     # for rendering HTML files
     context={
@@ -9,7 +9,7 @@ def index(request):
         'age':23,
         'nationality':'British'
     }
-    # return render(request, 'index.html',context) 
+    # return render(request, 'index1.html',context) 
     return render(request, 'staticcss.html',context) 
     
 
@@ -17,3 +17,6 @@ def counter(request):
     words = request.POST['words']
     length = len(words.split())
     return render(request, 'counter.html', {'length':length})
+
+def index(request):
+    return render(request, 'index.html')   
