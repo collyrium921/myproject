@@ -20,9 +20,13 @@ def index1(request):
     
 
 def counter(request):
-    words = request.POST['words']
-    length = len(words.split())
-    return render(request, 'counter.html', {'length':length})
+    # words = request.POST['words']
+    # length = len(words.split())
+    # return render(request, 'counter.html', {'length':length})
+
+    posts =[1,2,3,4,5,'tim','tom','john']
+    return render(request, 'counter.html', {'posts':posts})
+
 
 def index(request):
     # before creating database
@@ -93,3 +97,6 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('index')
+
+def post(request, pk):
+    return render(request, 'post.html', {'pk':pk})

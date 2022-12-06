@@ -1,1 +1,4 @@
-<h1>Lenght of words is: {{length}}</h1>
+{% for post in posts %}
+<h1><a href="{% url 'post' post %}">{{post}}</a></h1>
+    {% endfor %}
+{% comment %} <h1>Lenght of words is: {{length}}</h1> {% endcomment %}
